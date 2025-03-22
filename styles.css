@@ -1,18 +1,30 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
 #board {
     display: grid;
-    grid-template-columns: repeat(8, 50px);
+    grid-template-columns: repeat(8, 1fr);
     grid-gap: 2px;
     background-color: #333;
-    width: fit-content;
+    width: 90vw;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
     padding: 5px;
-    margin-top: 10px;
+    box-sizing: border-box;
 }
 
 .cell {
-    width: 50px;
-    height: 50px;
     background-color: green;
     cursor: pointer;
+    width: 100%;
+    height: 100%;
 }
 
 .black {
@@ -26,19 +38,14 @@
 }
 
 #message {
-    font-size: 20px;
+    font-size: 1.2em;
     margin-top: 10px;
+    text-align: center;
 }
 
-select {
-    font-size: 16px;
-    padding: 5px;
-    margin-bottom: 10px;
-}
-
-#resetButton, #soundToggleButton {
-    font-size: 16px;
+select, #resetButton, #soundToggleButton {
+    font-size: 1em;
     padding: 5px 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin: 5px;
+    border-radius: 5px;
 }
